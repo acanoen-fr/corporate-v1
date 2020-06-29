@@ -17,3 +17,4 @@ framework:
         log: true
 
     error_controller: App\Controller\ErrorController::NotFound
+    disallow_search_engine_index: false
