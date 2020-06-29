@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="intro">
+        <img src="/img/logo.jpg" alt="Logo" width="150" class="intro-image">
+        <h1 class="intro-title">Alexandre Canoën</h1>
+        <div class="intro-divider"></div>
+        <h2 class="intro-description">Développeur web freelance</h2>
+    </div>
+    <section id="home">
+        <h3>A propos de moi</h3>
+        <p>Passionné par le développement informatique, j'ai décidé de mettre à profit mes compétences en devenant développeur web freelance pour vous permettre d'avoir une meilleure visibilité sur Internet. Du site one-page à l'application web sur mesure, je saurais m'adapter à vos besoins.</p>
+        <p>Fullstack et polyvalent, je peux intervenir sur des projets front-end ou back-end. Curieux et apprenant vite, j'appends un peu plus chaque jour.</p>
+        <p>Particulier, auto-entrepreneur ou dirigeant de société, je réalise le site Internet dédié à votre activité.</p>
+        <p>A titre indicatif, mon tarif journalier est de 150€ HT.</p>
+        <a class="btn-contact" href="/contact">Obtenir un devis gratuit</a>
+    </section>
+    <section id="offers">
+        <h3>Mes prestations</h3>
+        <p>Je propose principalement trois type de services.</p>
+        <div class="services">
+            <div class="service">
+                <h4>Site vitrine</h4>
+                <p>Une véritable vitrine virtuelle pour votre entreprise. Possibilité de gérer votre contenu dynamiquement à l'aide d'un panel administrateur.</p>
+                <p>A partir de 490€ HT</p>
+            </div>
+            <div class="service">
+                <h4>Site e-commerce</h4>
+                <p>Envie de vous lancer dans l'aventure du e-commerce ? Vendez vos produits en ligne facilement et envoyez-les à vos clients.</p>
+                <p>A partir de 990€ HT</p>
+            </div>
+            <div class="service">
+                <h4>Application web</h4>
+                <p>Besoin d'une application pour vous aider au quotidien ? Je créé un outil adapté à vos besoins qui vous permet de vous concentrer sur votre activité.</p>
+                <p>A partir de 1490€ HT</p>
+            </div>
+        </div>
+        <h4>Autre type de projet ?</h4>
+        <p>Une application mobile ? Un logiciel de bureau ? Je développe toutes vos idées pour vous aider à vous concentrer sur votre activité. Contactez-moi pour obtenir un devis gratuit.</p>
+        <a class="btn-contact" href="/contact">Me contacter</a>
+    </section>
+    <section id="portfolio">
+        <h3>Mes réalisations</h3>
+        <p>Voici quelques exemples de réalisations pour vous donner une idée de mes compétences en tant que développeur web.</p>
+        <div class="creations">
+            <img src="/img/bossu.jpg" alt="Gestion de rendez-vous pour un cabinet médical">
+            <img src="/img/guard.jpg" alt="Gestion d'adhérents pour une association">
+            <img src="/img/website.jpg" alt="Mon CV en ligne - Ancienne version">
+            <img src="/img/minecloud.png" alt="Application de sauvegarde de mondes Minecraft">
+            <img src="/img/site.png" alt="Mon site Internet de Freelance - Sans Framework">
+        </div>
+        <p>Pour consulter mes autres réalisations personnelles, consultez <a href="https://github.com/acanoenfr" target="_blank">mon profil GitHub</a>.</p>
+    </section>
+{% endblock %}

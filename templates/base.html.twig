@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Passionné par le développement informatique, j'offre mes services de développeur web pour vous aider à améliorer la visiblité de votre entreprise sur Internet.">
+        <meta name="og:url" content="https://acanoen.fr">
+        <meta name="og:type" content="website">
+        <meta name="og:title" content="Alexandre Canoën">
+        <meta name="og:description" content="Développement de solutions informatique sur mesure">
+        <meta name="og:image" content="https://acanoen.fr/img/logo.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@acanoenfr">
+        <meta name="twitter:creator" content="@acanoenfr">
+        <title>{% block title %}Alexandre Canoën - Développeur web freelance{% endblock %}</title>
+        <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "Website",
+                "name": "Alexandre Canoën",
+                "author": {
+                    "@type": "Person",
+                    "name": "Alexandre Canoën"
+                },
+                "datePublished": "2020-07-01",
+                "description": "Développement de solutions informatique sur mesure"
+            }
+        </script>
     </head>
     <body>
+        <header class="header">
+            <h3 class="header-title">
+                <a href="/">Alexandre C.</a>
+            </h3>
+            <button class="menu-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+            <nav class="menu">
+                <ul class="primary">
+                    <li>
+                        <a href="/#home">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/#offers">Mes prestations</a>
+                    </li>
+                    <li>
+                        <a href="/#portfolio">Mes réalisations</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="btn-client" href="/client">Espace client</a>
+                    </li>
+                </ul>
+                <ul class="social">
+                    <li>
+                        <a href="mailto:contact@acanoen.fr"><i class="fas fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/acanoenfr" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/acanoenfr" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <footer class="footer">
+            <p class="footer-text">&copy; Copyright 2020 Alexandre Canoën | <a href="/mentions">Mentions légales</a></p>
+        </footer>
+        <script src="/js/script.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135751388-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+            gtag('config', 'UA-135751388-1')
+        </script>
     </body>
 </html>

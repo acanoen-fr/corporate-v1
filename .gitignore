@@ -1,3 +1,6 @@
+.idea/
+.DS_Store
+acanoen_fr.iml
 
 ###> symfony/framework-bundle ###
 /.env.local
