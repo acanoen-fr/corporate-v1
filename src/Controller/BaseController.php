@@ -47,6 +47,8 @@ class BaseController extends AbstractController
         }
 
         if ($isSuccess) {
+            ini_set('SMTP', 'ssl0.ovh.net');
+            ini_set('smtp_port', 25);
             $headers = 'MIME-Version: 1.0' . "\r\n" .
                 'Content-Type: text/html; charset=UTF-8' . "\r\n" .
                 "From: {$req['name']} <{$req['email']}>" . "\r\n" .
