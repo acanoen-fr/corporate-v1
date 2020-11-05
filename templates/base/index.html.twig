@@ -1,54 +1,139 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="intro">
-        <img src="/img/logo.jpg" alt="Logo" width="150" class="intro-image">
-        <h1 class="intro-title">Alexandre Canoën</h1>
-        <div class="intro-divider"></div>
-        <h2 class="intro-description">Développeur web freelance</h2>
-    </div>
-    <section id="home">
-        <h3>A propos de moi</h3>
-        <p>Passionné par le développement informatique, j'ai décidé de mettre à profit mes compétences en devenant développeur web freelance pour vous permettre d'avoir une meilleure visibilité sur Internet. Du site one-page à l'application web sur mesure, je saurais m'adapter à vos besoins.</p>
-        <p>Fullstack et polyvalent, je peux intervenir sur des projets front-end ou back-end. Curieux et apprenant vite, j'appends un peu plus chaque jour.</p>
-        <p>Particulier, auto-entrepreneur ou dirigeant de société, je réalise le site Internet dédié à votre activité.</p>
-        <p>A titre indicatif, mon tarif journalier est de 200€ HT.</p>
-        <a class="btn-contact" href="/contact">Obtenir un devis gratuit</a>
-    </section>
-    <section id="offers">
-        <h3>Mes prestations</h3>
-        <p>Je propose principalement trois type de services.</p>
-        <div class="services">
-            <div class="service">
-                <h4>Site vitrine</h4>
-                <p>Une véritable vitrine virtuelle pour votre entreprise. Possibilité de gérer votre contenu dynamiquement à l'aide d'un panel administrateur.</p>
-                <p>A partir de 490€ HT</p>
+    <header class="header">
+        {% include 'includes/header.html.twig' %}
+        <div class="intro">
+            <div class="intro-description">
+                <h1>De la conception à la réalisation de votre site internet sur mesure</h1>
+                <h3>Mon tarif horaire : 200€ HT</h3>
+                <button class="btn" onclick="window.location.href = '/contact'">
+                    Obtenir un devis gratuit
+                </button>
             </div>
-            <div class="service">
-                <h4>Site e-commerce</h4>
-                <p>Envie de vous lancer dans l'aventure du e-commerce ? Vendez vos produits en ligne facilement et envoyez-les à vos clients.</p>
-                <p>A partir de 990€ HT</p>
-            </div>
-            <div class="service">
-                <h4>Application web</h4>
-                <p>Besoin d'une application pour vous aider au quotidien ? Je créé un outil adapté à vos besoins qui vous permet de vous concentrer sur votre activité.</p>
-                <p>A partir de 1490€ HT</p>
+            <div class="intro-logo">
+                <img src="/img/logo.jpg" alt="Alexandre C.">
             </div>
         </div>
-        <h4>Autre type de projet ?</h4>
-        <p>Une application mobile ? Un logiciel de bureau ? Je développe toutes vos idées pour vous aider à vous concentrer sur votre activité. Contactez-moi pour obtenir un devis gratuit.</p>
-        <a class="btn-contact" href="/contact">Me contacter</a>
-    </section>
-    <section id="portfolio">
-        <h3>Mes réalisations</h3>
-        <p>Voici quelques exemples de réalisations pour vous donner une idée de mes compétences en tant que développeur web.</p>
-        <div class="creations">
-            <img src="/img/bossu.jpg" alt="Gestion de rendez-vous pour un cabinet médical">
-            <img src="/img/guard.jpg" alt="Gestion d'adhérents pour une association">
-            <img src="/img/website.jpg" alt="Mon CV en ligne - Ancienne version">
-            <img src="/img/minecloud.png" alt="Application de sauvegarde de mondes Minecraft">
-            <img src="/img/site.png" alt="Mon site Internet de Freelance - Sans Framework">
+    </header>
+    <section class="section offers" id="offers">
+        <div class="section-intro">
+            <h2>Offres de service</h2>
+            <div class="white-divider"></div>
         </div>
-        <p>Pour consulter mes autres réalisations personnelles, consultez <a href="https://github.com/acanoenfr" target="_blank">mon profil GitHub</a>.</p>
+        <ul class="offers-list">
+            <li>
+                <h3>Site e-commerce</h3>
+                <ul class="specs-list">
+                    <li><i class="fas fa-check"></i> Pages illimités</li>
+                    <li><i class="fas fa-check"></i> Articles illimités</li>
+                    <li><i class="fas fa-check"></i> Panel administrateur</li>
+                    <li><i class="fas fa-check"></i> Référencement SEO</li>
+                </ul>
+                <button class="btn" onclick="window.location.href = '/contact'">
+                    Dès 600€ HT
+                </button>
+            </li>
+            <li class="star">
+                <h3>Site vitrine <i class="fas fa-star" style="color: goldenrod;"></i></h3>
+                <ul class="specs-list">
+                    <li><i class="fas fa-check"></i> Pages illimités</li>
+                    <li><i class="fas fa-check"></i> Panel administrateur</li>
+                    <li><i class="fas fa-check"></i> Référencement SEO</li>
+                    <li><i class="fas fa-check"></i> E-Commerce en option</li>
+                </ul>
+                <button class="btn" onclick="window.location.href = '/contact'">
+                    Dès 300€ HT
+                </button>
+            </li>
+            <li>
+                <h3>Application web</h3>
+                <ul class="specs-list">
+                    <li><i class="fas fa-check"></i> 100% personnalisable</li>
+                    <li><i class="fas fa-check"></i> Panel administrateur</li>
+                    <li><i class="fas fa-check"></i> Interface intuitive</li>
+                    <li><i class="fas fa-check"></i> Hébergement en option</li>
+                </ul>
+                <button class="btn" onclick="window.location.href = '/contact'">
+                    Dès 900€ HT
+                </button>
+            </li>
+        </ul>
     </section>
+    <section class="section portfolio" id="portfolio">
+        <div class="section-intro">
+            <h2>Exemple de créations</h2>
+            <div class="black-divider"></div>
+        </div>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="/img/site.png" style="width: 100%;" alt="Mon site Internet de Freelance">
+                <h4 class="slide-text">Mon site Internet de Freelance</h4>
+            </div>
+            <div class="slide fade">
+                <img src="/img/minecloud.png" style="width: 100%;" alt="MineCloud.fr - Sauvegarde de cartes Minecraft dans le cloud">
+                <h4 class="slide-text">MineCloud.fr - Sauvegarde de cartes Minecraft dans le cloud</h4>
+            </div>
+            <div class="slide fade">
+                <img src="/img/bossu.jpg" style="width: 100%;" alt="Application web de gestion de rendez-vous">
+                <h4 class="slide-text">Application web de gestion de rendez-vous</h4>
+            </div>
+            <div class="slide fade">
+                <img src="/img/guard.jpg" style="width: 100%;" alt="Application web de gestion d'adhérents pour une association">
+                <h4 class="slide-text">Application web de gestion d'adhérents pour une association</h4>
+            </div>
+            <div class="slide fade">
+                <img src="/img/website.jpg" style="width: 100%;" alt="Mon CV en ligne">
+                <h4 class="slide-text">Mon CV en ligne</h4>
+            </div>
+            <a class="slide-prev" onclick="pushSlide(-1)">
+                <i class="fas fa-chevron-left fa-3x"></i>
+            </a>
+            <a class="slide-next" onclick="pushSlide(1)">
+                <i class="fas fa-chevron-right fa-3x"></i>
+            </a>
+        </div>
+    </section>
+    <section class="section blog">
+        <div class="section-intro">
+            <h2>Derniers articles publiés</h2>
+            <div class="black-divider"></div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <a href="/blog/article-blog-1" target="_blank">
+                    <img src="https://picsum.photos/1920/1080" alt="blog_1" width="300" class="card-image">
+                </a>
+                <div class="card-details">
+                    <h3 class="card-title">Article de Blog n°1</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Adipisci aperiam at distinctio...</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="/blog/article-blog-2" target="_blank">
+                    <img src="https://picsum.photos/1920/1080" alt="blog_1" width="300" class="card-image">
+                </a>
+                <div class="card-details">
+                    <h3 class="card-title">Article de Blog n°2</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Adipisci aperiam at distinctio...</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="/blog/article-blog-3" target="_blank">
+                    <img src="https://picsum.photos/1920/1080" alt="blog_1" width="300" class="card-image">
+                </a>
+                <div class="card-details">
+                    <h3 class="card-title">Article de Blog n°3</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Adipisci aperiam at distinctio...</p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="no-cards">
+            <h3>Aucun article à afficher</h3>
+        </div>-->
+    </section>
+    {% include 'includes/footer.html.twig' %}
 {% endblock %}
